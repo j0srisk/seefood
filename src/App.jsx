@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <h1 className="font-bold">Template React Tailwind</h1>
+      <h1 className="font-bold">Seefood</h1>
     </div>
   );
 }
