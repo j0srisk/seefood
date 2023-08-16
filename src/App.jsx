@@ -61,7 +61,7 @@ function App() {
 			body.classList.remove("bg-custom-red");
 			body.classList.remove("bg-custom-yellow");
 			body.classList.add("bg-gray-400");
-			body.classList.add("lg:bg-white");
+			body.classList.add("lg:bg-gray-100");
 		}
 	}
 
@@ -95,9 +95,9 @@ function App() {
 
 	return (
 		<div className="fixed flex h-[100svh] w-full items-center justify-center overscroll-none lg:flex-col">
-			<div className="relative flex h-full w-full flex-col lg:my-8 lg:aspect-[9/16] lg:w-auto lg:flex-1 lg:rounded-xl lg:shadow-2xl lg:outline lg:outline-2 lg:outline-white">
+			<div className="relative flex h-full w-full flex-col lg:my-8 lg:aspect-[9/16] lg:w-auto lg:flex-1 lg:rounded-2xl lg:shadow-2xl lg:outline lg:outline-2 lg:outline-white">
 				<div
-					className="absolute left-0 top-0 h-full w-full "
+					className="absolute left-0 top-0 h-full w-full lg:rounded-2xl "
 					style={{
 						backgroundImage: `url(${image})`,
 						backgroundSize: "cover", // Adjust this to control the image sizing
@@ -108,18 +108,16 @@ function App() {
 				<div className="relative flex h-full w-full flex-col">
 					{loading === true ? (
 						<div className="relative flex h-full w-full flex-col items-center justify-between ">
-							<StatusBar status={"Loading..."} backgroundColor={"bg-gray-400"}>
+							<StatusBar status={"Detecting..."} backgroundColor={"bg-gray-400"}>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
+									aria-hidden="true"
+									role="img"
+									preserveAspectRatio="xMidYMid meet"
 									viewBox="0 0 24 24"
-									className="animate-spin stroke-custom-yellow stroke-[2.5] object-contain p-8"
+									className="animate-spin fill-custom-yellow stroke-custom-yellow stroke-[1] object-contain p-6"
 								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
-									/>
+									<path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6c0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0 0 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6c0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 0 0 4 12c0 4.42 3.58 8 8 8v3l4-4l-4-4v3z"></path>
 								</svg>
 							</StatusBar>
 						</div>
@@ -133,7 +131,17 @@ function App() {
 					) : hotdog === false ? (
 						<div className="relative flex h-full w-full flex-col items-center justify-between ">
 							<StatusBar status={"Not Hotdog!"} backgroundColor={"bg-custom-red"}>
-								<img src="HotDog100.png" className="object-contain p-2" />
+								<img src="HotDog100.png" className="absolute object-contain p-2" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									aria-hidden="true"
+									role="img"
+									className="absolute fill-white stroke-black stroke-[.25] object-contain p-1"
+									preserveAspectRatio="xMidYMid meet"
+									viewBox="0 0 24 24"
+								>
+									<path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z"></path>
+								</svg>
 							</StatusBar>
 							<ShareButton handleNoThanks={handleNoThanks} />
 						</div>
@@ -160,18 +168,13 @@ function App() {
 							<StatusBar status={"Tap to Upload!"} backgroundColor={"bg-gray-400"}>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									className="stroke-custom-yellow stroke-[2] object-contain p-8"
+									viewBox="0 -960 960 960"
+									className="fill-custom-yellow stroke-custom-yellow stroke-[2] object-contain p-6"
 								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15"
-									/>
+									<path d="M433-322v-323L319-530l-68-67 229-229 229 229-68 67-114-115v323h-94ZM135-135v-237h94v143h502v-143h95v237H135Z" />
 								</svg>
 							</StatusBar>
-							<div className="relative flex h-full  w-full items-center justify-center  bg-custom-blue lg:rounded-xl">
+							<div className="relative flex h-full  w-full items-center justify-center  bg-custom-blue lg:rounded-b-2xl">
 								<img src="HotDog2000.png" className="max-w-[300px] object-scale-down p-4" />
 							</div>
 							<input

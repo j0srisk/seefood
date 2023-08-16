@@ -1,11 +1,11 @@
 const ShareButton = ({ handleNoThanks }) => {
 	return (
-		<div className="absolute bottom-0 flex w-full flex-col justify-center px-20">
-			<button className="rounded-xl border-2 border-white bg-custom-blue p-5 text-center text-3xl font-extrabold text-white">
+		<div className="absolute bottom-0 flex w-full flex-col justify-center px-20 pb-5">
+			<button className="items-center justify-center rounded-2xl border-2 border-white bg-custom-blue px-5 py-4 text-center font-inter text-4xl font-extrabold text-white">
 				Share
 			</button>
 			<p
-				className="cursor-pointer p-5 text-center text-xl font-semibold text-white"
+				className="cursor-pointer p-5 text-center font-inter text-xl font-semibold text-white"
 				onClick={handleNoThanks}
 			>
 				No Thanks

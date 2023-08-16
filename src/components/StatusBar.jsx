@@ -7,7 +7,7 @@ const StatusBar = ({ children, status, backgroundColor }) => {
 				{children}
 			</div>
 			<p
-				className={`z-20 flex h-full w-full items-center justify-center  bg-custom-green p-1 text-center text-4xl font-extrabold text-custom-yellow ${backgroundColor}`}
+				className={`z-20 flex h-full w-full items-center justify-center p-1 text-center font-inter text-4xl font-extrabold text-custom-yellow ${backgroundColor} lg:rounded-t-2xl`}
 			>
 				{status}
 			</p>
