@@ -71,6 +71,7 @@ function App() {
 
 	async function query(file) {
 		console.log("querying");
+		console.log(import.meta.env.VITE_API_URL);
 
 		const formData = new FormData();
 		formData.append("file", file);
