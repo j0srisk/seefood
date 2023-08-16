@@ -17,7 +17,9 @@ function App() {
 				setLoading(false);
 			})
 			.catch((error) => {
-				alert.error("Error:", error.message);
+				console.error("Error:", error.message);
+				alert("Error: " + error.message);
+				setImage(null);
 				setLoading(false);
 			});
 	}
