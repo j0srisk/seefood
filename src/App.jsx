@@ -71,7 +71,7 @@ function App() {
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
 									viewBox="0 0 24 24"
-									className="animate-spin stroke-black stroke-[3.5] object-contain p-5"
+									className="hidden animate-spin stroke-black stroke-[3.5] object-contain p-5"
 								>
 									<path
 										strokeLinecap="round"
