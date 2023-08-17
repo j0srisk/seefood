@@ -191,7 +191,7 @@ function App() {
 									<path d="M433-322v-323L319-530l-68-67 229-229 229 229-68 67-114-115v323h-94ZM135-135v-237h94v143h502v-143h95v237H135Z" />
 								</svg>
 							</StatusBar>
-							<div className="absolute flex h-full  w-full items-center justify-center  bg-custom-blue lg:rounded-b-2xl">
+							<div className="absolute flex h-full  w-full items-center justify-center  bg-custom-blue lg:rounded-2xl">
 								<img src="HotDog2000.png" className="max-w-[300px] object-scale-down p-4" />
 							</div>
 							<a
