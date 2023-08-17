@@ -114,7 +114,7 @@ function App() {
 		<div className="fixed flex h-[100svh] w-full items-center justify-center overscroll-none lg:flex-col">
 			<div className="relative flex h-full w-full flex-col lg:my-8 lg:aspect-[9/16] lg:w-auto lg:flex-1 lg:rounded-2xl lg:shadow-2xl lg:outline lg:outline-2 lg:outline-white">
 				<div
-					className="absolute left-0 top-0 h-full w-full lg:rounded-2xl "
+					className="absolute left-0 top-0 h-full w-full bg-gray-300 lg:rounded-2xl"
 					style={{
 						backgroundImage: `url(${image})`,
 						backgroundSize: "cover", // Adjust this to control the image sizing
@@ -191,20 +191,21 @@ function App() {
 									<path d="M433-322v-323L319-530l-68-67 229-229 229 229-68 67-114-115v323h-94ZM135-135v-237h94v143h502v-143h95v237H135Z" />
 								</svg>
 							</StatusBar>
-							<div className="relative flex h-full  w-full items-center justify-center  bg-custom-blue lg:rounded-b-2xl">
+							<div className="absolute flex h-full  w-full items-center justify-center  bg-custom-blue lg:rounded-b-2xl">
 								<img src="HotDog2000.png" className="max-w-[300px] object-scale-down p-4" />
 							</div>
+							<a
+								href="https://github.com/j0srisk"
+								className="absolute bottom-0 z-20 cursor-pointer p-10 text-center font-inter text-xl font-semibold text-white"
+							>
+								Developed by Joseph Risk
+							</a>
 							<input
 								type="file"
 								id="single"
 								accept="image/png, image/jpeg, image/webp"
 								onChange={handleImage}
 								className="absolute z-10 h-full w-full flex-1 bg-red-500 opacity-0"
-								style={{
-									backgroundImage: `url(${image})`,
-									backgroundSize: "cover", // Adjust this to control the image sizing
-									backgroundPosition: "center", // Adjust this to control the image position
-								}}
 							/>
 						</div>
 					)}
