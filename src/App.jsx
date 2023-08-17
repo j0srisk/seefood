@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import StatusBar from "./components/StatusBar";
 import ShareButton from "./components/ShareButton";
+import Compressor from "compressorjs";
 
 function App() {
 	const [image, setImage] = useState(null);
@@ -11,19 +12,34 @@ function App() {
 		if (e.target.files.length === 0) return;
 		setLoading(true);
 		const uploadedImage = e.target.files[0];
+		console.log(uploadedImage);
 		setImage(URL.createObjectURL(uploadedImage));
+
 		if (!uploadedImage) return;
-		query(uploadedImage)
-			.then((response) => {
-				console.log(JSON.stringify(response));
-				setLoading(false);
-			})
-			.catch((error) => {
-				console.error("Error:", error.message);
-				alert("Error: " + error.message);
-				setImage(null);
-				setLoading(false);
-			});
+
+		new Compressor(uploadedImage, {
+			quality: 0.6,
+			maxWidth: 500,
+			convertSize: 1,
+			convertTypes: ["image/png", "image/webp"],
+			success(result) {
+				console.log(result);
+				query(result)
+					.then((response) => {
+						console.log(JSON.stringify(response));
+						setLoading(false);
+					})
+					.catch((error) => {
+						console.error("Error:", error.message);
+						alert("Error: " + error.message);
+						setImage(null);
+						setLoading(false);
+					});
+			},
+			error(err) {
+				console.log(err.message);
+			},
+		});
 	}
 
 	function handleNoThanks() {
