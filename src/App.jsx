@@ -141,14 +141,14 @@ function App() {
 					) : hotdog === true ? (
 						<div className="relative flex h-full w-full flex-col items-center justify-between ">
 							<StatusBar status={"Hotdog!"} backgroundColor={"bg-custom-green"}>
-								<img src="HotDog100.png" className="object-contain p-2" />
+								<img src="HotDog300.png" className="object-contain p-2" />
 							</StatusBar>
 							<ShareButton handleNoThanks={handleNoThanks} />
 						</div>
 					) : hotdog === false ? (
 						<div className="relative flex h-full w-full flex-col items-center justify-between ">
 							<StatusBar status={"Not Hotdog!"} backgroundColor={"bg-custom-red"}>
-								<img src="HotDog100.png" className="absolute object-contain p-2" />
+								<img src="HotDog300.png" className="absolute object-contain p-2" />
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									aria-hidden="true"
@@ -192,10 +192,12 @@ function App() {
 								</svg>
 							</StatusBar>
 							<div className="absolute flex h-full  w-full items-center justify-center  bg-custom-blue lg:rounded-3xl">
-								<img src="HotDog2000.png" className="max-w-[300px] object-scale-down p-4" />
+								<img src="HotDog300.png" className="max-w-[300px] object-scale-down p-4" />
 							</div>
 							<a
 								href="https://github.com/j0srisk"
+								target="_blank"
+								rel="noopener noreferrer"
 								className="absolute bottom-0 z-20 cursor-pointer p-10 text-center font-inter text-xl font-semibold text-white"
 							>
 								Developed by Joseph Risk
