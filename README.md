@@ -1,16 +1,18 @@
-<h1 align="center" id="title">Template React Tailwind</h1>
+<h1 align="center" id="title">Not Hotdog</h1>
 
-<p id="description">Description Paragraph</p>
+<p id="description">Recreation of Jian-Yang's 'Not Hotdog' app from HBO's Silicon Valley. Backend is a containerized Flask API hosted on my home server. Utilizes a generic Visual Question Answering model to determine Hotdog. Built mainly to test running custom AI models on my own hardware.</p>
 
 <h2>🚀 Demo</h2>
 
-Netlify Badge
+[![Netlify Status](https://api.netlify.com/api/v1/badges/607d6845-cb75-4c5a-a277-190b713a13b7/deploy-status)](https://app.netlify.com/sites/magnificent-melomakarona-f9ab22/deploys)
 
-[Link](Link)
+[Live Link](https://nothotdog.josephrisk.com/)
+
+[Backend Repo](https://github.com/j0srisk/seefood-backend)
 
 <h2>Project Screenshots:</h2>
 
-<img src="screenshot.png" alt="project-screenshot" width="400" height="auto">
+<img src="https://github.com/j0srisk/personal-site/blob/main/src/assets/images/projects/not-hotdog.png?raw=true" alt="project-screenshot" width="400" height="auto">
 
   
   
@@ -18,9 +20,9 @@ Netlify Badge
 
 Here're some of the project's best features:
 
-*   Feature 1
-*   Feature 2
-*   Feature 3
+*   Responsive Design 
+*   User Image Upload
+*   Browser Based Image Compression
 
   
   
@@ -28,6 +30,9 @@ Here're some of the project's best features:
 
 Technologies used in the project:
 
+*   PyTorch
+*   Docker
 *   React JS
-*   Vite
-*   Tailwind
+*   TailwindCSS
+*   Javascript
+*   Netlify
